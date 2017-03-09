@@ -10,9 +10,11 @@ composer require youwe/pimcore-fixtures
 composer require youwe/pimcore-href-typeahead
 composer require youwe/pimcore-object-bridge
 
-#composer require youwe/pimcore-object-defaults
-#composer require youwe/pimcore-quickstart
-#composer require youwe/pimcore-shop
+composer require youwe/pimcore-object-defaults
+composer require youwe/pimcore-quickstart
+composer require youwe/pimcore-shop
+
+composer update
 
 echo .
 echo .
@@ -29,6 +31,7 @@ echo .
 echo PLEASE PUT THE LOCAL DEV DB CREDENTIALS IN FOLLOWING FILES:
 echo .
 echo /website/var/config/system.php
+echo /tools/build/local.cfg
 echo .
 echo .
 echo .

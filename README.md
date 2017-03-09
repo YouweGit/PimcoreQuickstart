@@ -38,6 +38,14 @@ We replicate the pimcore tree structure inside the plugin,
 so we can easily put all the files into place using magic.
 
 
+Getting started
+---------------
+
+* download pimcore 4
+* start a new project with it
+* install this plugin
+* run quickstart.sh to complete the baseproject
+
 Commands
 --------
 
