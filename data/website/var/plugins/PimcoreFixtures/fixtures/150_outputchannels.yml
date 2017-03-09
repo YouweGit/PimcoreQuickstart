@@ -1,0 +1,6 @@
+Pimcore\Model\Object\OutputChannel:
+    outputchannel1:
+        name: 'default'
+        site: '@site1'
+        thumbnails: ''
+        published: true

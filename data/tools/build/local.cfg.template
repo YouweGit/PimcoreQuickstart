@@ -1,0 +1,6 @@
+# database
+DBHost=localhost
+DBName=hotbath
+DBUser=root
+DBPassword=root
+DBPort=3306

@@ -1,0 +1,12 @@
+{
+    "name": "youwe/pimcore-quickstart",
+    "type": "pimcore-plugin",
+    "require": {
+        "pimcore/installer-plugin": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PimcoreQuickstart\\": "lib"
+        }
+    }
+}

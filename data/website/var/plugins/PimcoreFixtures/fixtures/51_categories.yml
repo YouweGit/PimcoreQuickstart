@@ -1,0 +1,10 @@
+Pimcore\Model\Object\Category:
+    category11:
+        name: category11
+        published: true
+        parent: '@category1'
+    category12:
+        name: category12
+        published: true
+        parent: '@category1'
+

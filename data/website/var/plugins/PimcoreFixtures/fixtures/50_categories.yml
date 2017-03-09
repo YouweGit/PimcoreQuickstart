@@ -1,0 +1,4 @@
+Pimcore\Model\Object\Category:
+    category1:
+        name: category1
+        published: true

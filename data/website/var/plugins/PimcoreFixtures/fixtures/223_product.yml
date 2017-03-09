@@ -1,0 +1,57 @@
+#Pimcore\Model\Object\Fieldcollection\Data\ProductImages:
+#    productImage:
+#        image: <randomElement(array(@img1,@img2,@img3,@img4,@img5,@img6,@img7))>
+#
+#Pimcore\Model\Object\Fieldcollection:
+#    imageCollection:
+#        items: ['@productImage']
+
+Pimcore\Model\Object\Product:
+    product{1..200}:
+        name: <sentence()>
+        sku (unique): <ean13()>
+        quantity: <numberBetween(1, 18)>
+        price: <numberBetween(3, 333)>
+        categories: <shuffleArray(array(@category12, @category121, @category111), 2)>
+#        productName: <sentence()>
+#        productNameExtension: <sentence()>
+#        brand: <randomElement(array(@brand1, @brand2, @brand3, @brand4, @brand5, @brand6, @brand7, @brand8, @brand9))>
+#        prodState: <randomElement(array('NEW','REFURB_GRADE_1','REFURB_GRADE_2'))>
+#        vatLevel: <randomElement(array('0', 'HIGH', 'LOW'))>
+#        plugQuantity: <numberBetween(0, 2)>
+#        plugColor: <randomElement(array('WHITE','BLACK'))>
+#        plugType: <randomElement(array('UK','US','EU'))>
+#        plugPrice: <randomFloat(2, 0, 50)>
+#        depth: <numberBetween(1, 10)>
+#        height: <numberBetween(1, 10)>
+#        width: <numberBetween(1, 10)>
+#        weight: <current()>
+#        productInfo1: <url()>
+#        productInfo2: <url()>
+#        minAge: <numberBetween(3, 18)>
+#        availableStock: <numberBetween(200, 600)>
+#        stockInfo: <sentence()>
+#        delivery_counter: <boolean(50)>
+#        maxCartAmount: <numberBetween(1, 10)>
+#        backgroundDimensions: <numberBetween(1, 10)>
+#        imageOffset: <numberBetween(1, 10)>
+#        key: product<current()>
+#        productImages: '@imageCollection'
+        published: true
+#        parent: <moduleElementByFilenameAndClass('206_taxonomy_4.yml', 'Pimcore\Model\Object\IboodProductFolder', $weight)>
+#        parent: '@products_folder'
+
+#Pimcore\Model\Object\Objectbrick\Data\ErpInfo:
+#    productErpInfoData{1..100}:
+#        __construct: ['@product<current()>']
+#        lastErpSync: <dateTimeBetween("-2 days", "now")>
+#        lastErpSyncConfirmation: <dateTimeBetween("-2 days", "now")>
+#        erpSendState: <numberBetween(0, 2)>
+#        erpId: <ean13()>
+#        syncState: <randomElement(array('DRAFT', 'DENIED', 'ERROR', 'FINAL'))>
+#        syncError: '50%? <sentence()>'
+#
+#Pimcore\Model\Object\IboodProduct\ErpInfo:
+#    productErpInfo{1..100}:
+#        __construct: ['@product<current()>', 'erpInfo']
+#        erpInfo: '@productErpInfoData<current()>'

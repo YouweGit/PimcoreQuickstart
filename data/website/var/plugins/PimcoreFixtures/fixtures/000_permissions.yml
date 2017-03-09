@@ -1,0 +1,67 @@
+Pimcore\Model\User\Permission\Definition:
+    permission_assets:
+        key: assets
+    permission_backup:
+        key: backup
+    permission_bounce_mail_inbox:
+        key: bounce_mail_inbox
+    permission_classes:
+        key: classes
+    permission_clear_cache:
+        key: clear_cache
+    permission_clear_temp_files:
+        key: clear_temp_files
+    permission_dashboards:
+        key: dashboards
+    permission_documents:
+        key: documents
+    permission_document_types:
+        key: document_types
+    permission_emails:
+        key: emails
+    permission_glossary:
+        key: glossary
+    permission_http_errors:
+        key: http_errors
+    permission_newsletter:
+        key: newsletter
+    permission_notes_events:
+        key: notes_events
+    permission_objects:
+        key: objects
+    permission_plugins:
+        key: plugins
+    permission_predefined_properties:
+        key: predefined_properties
+    permission_qr_codes:
+        key: qr_codes
+    permission_recyclebin:
+        key: recyclebin
+    permission_redirects:
+        key: redirects
+    permission_reports:
+        key: reports
+    permission_robots_txt:
+        key: robots.txt
+    permission_routes:
+        key: routes
+    permission_seemode:
+        key: seemode
+    permission_seo_document_editor:
+        key: seo_document_editor
+    permission_system_settings:
+        key: system_settings
+    permission_tag_snippet_management:
+        key: tag_snippet_management
+    permission_targeting:
+        key: targeting
+    permission_thumbnails:
+        key: thumbnails
+    permission_translations:
+        key: translations
+    permission_users:
+        key: users
+    permission_website_settings:
+        key: website_settings
+    permission_tags_search:
+        key: tags_search
