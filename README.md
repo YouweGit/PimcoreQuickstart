@@ -55,3 +55,8 @@ Installation
 composer require youwe/pimcore-quickstart
 ```
 
+Add to /.gitignore :
+
+```
+/plugins/PimcoreQuickstart
+```
