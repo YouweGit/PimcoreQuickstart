@@ -5,6 +5,9 @@ namespace PimcoreQuickstart;
 class Manager
 {
     public $files = [
+        // readme
+        '/README.md',
+        '/.gitignore',
         // environment configurations
         '/website/var/config/production.system.php',
         '/website/var/config/acceptance.system.php',
@@ -78,7 +81,7 @@ class Manager
         $source = $this->pimcoreFilesRoot;
         $target = $this->pluginFilesRoot;
         $files = $this->files;
-        $this->copyFiles($source, $target, $files);
+        $this->copyFiles($source, $target, $files, self::UPDATE_PLUGIN);
     }
 
     public function copyPluginFilesToProject()
@@ -86,13 +89,26 @@ class Manager
         $source = $this->pluginFilesRoot;
         $target = $this->pimcoreFilesRoot;
         $files = $this->files;
-        $this->copyFiles($source, $target, $files);
+        $this->copyFiles($source, $target, $files, self::UPDATE_PROJECT);
     }
 
-    public function copyFiles($source, $target, $files) {
+    public function copyFiles($source, $target, $files, $direction) {
         foreach($files as &$file) {
-            $s = $source . $file;
-            $t = $target . $file;
+            $sourcefile = $targetfile = $file;
+
+            // @TODO: change to array if more files need to be renamed
+            if($file == '/.gitignore') {
+                if($direction == self::UPDATE_PLUGIN)
+                {
+                    $targetfile = '_____' . $targetfile;
+                }
+                elseif ($direction == self::UPDATE_PROJECT)
+                {
+                    $sourcefile = '_____' . $sourcefile;
+                }
+            }
+            $s = $source . $sourcefile;
+            $t = $target . $targetfile;
             echo "\nCopying:\n" . $s . " to\n" . $t . "\n\n";
             if(file_exists($s)) {
                 $path = dirname($t);
