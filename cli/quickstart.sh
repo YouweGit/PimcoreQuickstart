@@ -16,7 +16,7 @@ composer require youwe/pimcore-shop
 
 composer update
 
-
+chmod u+x ${CURRENT_PATH}/../../**/*.sh
 
 echo .
 echo .
@@ -39,7 +39,7 @@ echo .
 echo .
 echo . RUN THE LOCAL BUILD:
 echo .
-echo . /bin/bash ${CURRENT_PATH}/../../../tools/build/local_build.sh
+echo . /bin/bash ${CURRENT_PATH}/../../../tools/build/local-build.sh
 echo .
 echo .
 echo .
