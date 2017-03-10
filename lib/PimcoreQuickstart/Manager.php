@@ -7,7 +7,7 @@ class Manager
 
     const UPDATE_PLUGIN = 1;
     const UPDATE_PROJECT = 2;
-    
+
     public $files = [
         // readme
         '/README.md',
@@ -104,11 +104,11 @@ class Manager
             if($file == '/.gitignore') {
                 if($direction == self::UPDATE_PLUGIN)
                 {
-                    $targetfile = '_____' . $targetfile;
+                    $targetfile = '/_____.gitignore';
                 }
                 elseif ($direction == self::UPDATE_PROJECT)
                 {
-                    $sourcefile = '_____' . $sourcefile;
+                    $sourcefile = '/_____.gitignore';
                 }
             }
             $s = $source . $sourcefile;

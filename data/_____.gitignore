@@ -1,0 +1,34 @@
+
+/vendor
+/website/var/config/system.php
+/website/config/cache.php
+/website/var/assets
+/website/var/backup
+/website/var/cache
+/website/var/classes
+/website/var/email
+/website/var/log
+/website/var/recyclebin
+/website/var/search
+/website/var/system
+/website/var/tmp
+/website/var/versions
+/website/var/webdav
+
+/plugins/PimcoreFixtures
+/plugins/PimcoreDeployment
+/plugins/PimcoreObjectBridge
+/plugins/PimcoreHrefTypeahead
+/plugins/PimcoreObjectDefaults
+/plugins/PimcoreQuickstart
+/plugins/PimcoreShop
+
+/tools/build/local.cfg
+
+
+# PhpStorm / IDEA
+.idea
+.DS_Store
+# NetBeans
+nbproject
+
