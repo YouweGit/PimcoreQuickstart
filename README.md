@@ -43,7 +43,16 @@ so we can easily put all the files into place using magic.
 Getting started
 ---------------
 
-* https://www.pimcore.org/docs/latest/Installation_and_Upgrade/System_Setup_and_Hosting/Composer_Install.html
+* create a new repository on ie. bitbucket
+
+* clone the empty repo
+
+```bash
+cd /data/projects/
+git clone ssh://git@source.youwe.nl:7999/pimb2b/pimcore-your-project-name.git ./PimcoreYourProjectName
+```
+
+* create the project inside the empty cloned repo (https://www.pimcore.org/docs/latest/Installation_and_Upgrade/System_Setup_and_Hosting/Composer_Install.html)
 
 ```bash
 cd /data/projects/
