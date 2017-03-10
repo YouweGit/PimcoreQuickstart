@@ -4,6 +4,10 @@ namespace PimcoreQuickstart;
 
 class Manager
 {
+
+    const UPDATE_PLUGIN = 1;
+    const UPDATE_PROJECT = 2;
+    
     public $files = [
         // readme
         '/README.md',
