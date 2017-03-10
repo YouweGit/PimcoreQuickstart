@@ -16,22 +16,32 @@ composer require youwe/pimcore-shop
 
 composer update
 
+
+
 echo .
 echo .
 echo .
-echo PLEASE PUT THE CORRECT IP ADDRESSES AND USERNAMES FOR DEPLOYMENTS IN THE FOLLOWING FILES:
+echo . PUT THE CORRECT IP ADDRESSES AND USERNAMES FOR DEPLOYMENTS IN THE FOLLOWING FILES:
 echo .
-echo /tools/capistrano/config/deploy.rb
-echo /tools/capistrano/config/deploy/acceptance.rb
-echo /tools/capistrano/config/deploy/production.rb
-echo /tools/capistrano/config/deploy/testing.rb
-echo .
-echo .
-echo .
-echo PLEASE PUT THE LOCAL DEV DB CREDENTIALS IN FOLLOWING FILES:
-echo .
-echo /website/var/config/system.php
-echo /tools/build/local.cfg
+echo . /tools/capistrano/config/deploy.rb
+echo . /tools/capistrano/config/deploy/acceptance.rb
+echo . /tools/capistrano/config/deploy/production.rb
+echo . /tools/capistrano/config/deploy/testing.rb
 echo .
 echo .
 echo .
+echo . PUT THE LOCAL DEV DB CREDENTIALS IN FOLLOWING FILES:
+echo .
+echo . /website/var/config/system.php
+echo . /tools/build/local.cfg
+echo .
+echo .
+echo .
+echo . RUN THE LOCAL BUILD:
+echo .
+echo . /bin/bash ${CURRENT_PATH}/../../../tools/build/local_build.sh
+echo .
+echo .
+echo .
+
+

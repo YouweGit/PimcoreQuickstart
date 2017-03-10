@@ -24,6 +24,7 @@ This plugin should:
     * /website/lib/Object/Traits/DefaultParentObject.php
     * /website/lib/Object/Traits/DefaultKeyFormat.php
 * copy /tools/build/*  (all the build tools)
+* include the tools / build stuff --> from ssh://git@source.youwe.nl:7999/pimb2b/pimcore-capistrano.git
 * include plugins through composer:
     * PimcoreDeployment
     * PimcoreFixtures
@@ -32,7 +33,8 @@ This plugin should:
     * PimcoreObjectDefaults
     * PimcoreQuickstart (this plugin)
     * PimcoreShop
-* include the tools / build stuff --> from ssh://git@source.youwe.nl:7999/pimb2b/pimcore-capistrano.git
+* run composer update
+* instruct the user of what is left to do 
     
 We replicate the pimcore tree structure inside the plugin,
 so we can easily put all the files into place using magic.
