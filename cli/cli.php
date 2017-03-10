@@ -72,3 +72,6 @@ switch ($opts->action) {
         $handler->copyProjectFilesToPlugin();
         break;
 }
+
+
+
