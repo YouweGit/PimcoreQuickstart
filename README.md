@@ -43,10 +43,29 @@ so we can easily put all the files into place using magic.
 Getting started
 ---------------
 
-* download pimcore 4
-* start a new project with it
-* install this plugin
-* run quickstart.sh to complete the baseproject
+* https://www.pimcore.org/docs/latest/Installation_and_Upgrade/System_Setup_and_Hosting/Composer_Install.html  YEP
+
+```bash
+cd /your/working/directory
+composer create-project pimcore/pimcore ./your-project-name
+cd your-project-name
+composer dumpautoload -o
+```
+
+* require quickstart
+
+```bash
+composer require youwe/pimcore-quickstart
+```
+
+* run the quickstart script to complete the baseproject
+
+```bash
+./plugins/PimcoreQuickstart/cli/quickstart.sh
+```
+
+* continue local setup instructions from the README.md of the new project
+
 
 Commands
 --------
