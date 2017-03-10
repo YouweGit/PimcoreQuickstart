@@ -43,12 +43,12 @@ so we can easily put all the files into place using magic.
 Getting started
 ---------------
 
-* https://www.pimcore.org/docs/latest/Installation_and_Upgrade/System_Setup_and_Hosting/Composer_Install.html  YEP
+* https://www.pimcore.org/docs/latest/Installation_and_Upgrade/System_Setup_and_Hosting/Composer_Install.html
 
 ```bash
-cd /your/working/directory
-composer create-project pimcore/pimcore ./your-project-name
-cd your-project-name
+cd /data/projects/
+composer create-project pimcore/pimcore ./PimcoreYourProjectName
+cd PimcoreYourProjectName
 composer dumpautoload -o
 ```
 
