@@ -142,7 +142,7 @@ class Manager
                     echo "Copied\n";
                     if($direction == self::UPDATE_PROJECT) {
                         $this->parse($t);
-                        echo " Parsed\n";
+                        echo "+ Parsed\n";
                     }
                 }
                 else {
@@ -163,7 +163,7 @@ class Manager
     public function getUserPlaceholderInput() {
         foreach($this->placeholders as $p => &$v) {
             // get input for $p ...
-            $input = readline($p . ' [' . $v . ']');
+            $input = readline('Enter ' . $p . ' [' . $v . ']: ');
             if($input) {
                 $v = $input;
             }

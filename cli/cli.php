@@ -33,7 +33,7 @@ try {
             "\n" .
             'Action parameter should be one of the following:' . "\n" .
             'copy-plugin-files-to-project   : set up project' . "\n" .
-            'copy-project-files-to-plugin   : update plugin (DEV ONLY)' . "\n" .
+            'copy-project-files-to-plugin   : update plugin (DEV ONLY! DONT USE!)' . "\n" .
             "\n" .
             'Example:' . "\n" .
             'php migration.php -a export-definition' . "\n" .
@@ -57,8 +57,8 @@ if (!\Pimcore\ExtensionManager::isEnabled('plugin', $plugin)) {
     echo "\nEnabling plugin on the fly.\n";
     \Pimcore\ExtensionManager::enable('plugin', $plugin);
     $command = 'php ' . implode(' ', $argv);
-    echo "\nRe-executing command: [ $command ] \n";
-    echo shell_exec($command);
+    echo "\nPlease re-execute command: [ $command ] \n";
+//    echo shell_exec($command);    // does not work when requiring user input!!!! -> let the user restart it!
     die();
 }
 
