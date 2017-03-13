@@ -2,6 +2,12 @@
 CURRENT_PATH=$(cd $(dirname "$0"); pwd)
 php ${CURRENT_PATH}/cli.php -a copy-plugin-files-to-project $*
 
+echo .
+echo .
+echo .  Grabbing capistrano deployment scripts from external git ...
+echo .
+echo .
+
 git clone --depth=1 --branch=master ssh://git@source.youwe.nl:7999/pimb2b/pimcore-capistrano.git ${CURRENT_PATH}/../../../tools/capistrano
 rm -rf ${CURRENT_PATH}/../../../tools/capistrano/.git
 
@@ -31,7 +37,7 @@ composer update
 
 echo .
 echo .
-echo .  Fixing *.sh executable permissions ...
+echo .  Fixing some executable permissions ...
 echo .
 echo .
 
@@ -77,7 +83,7 @@ echo .
 echo .
 echo .
 echo .
-echo .  **   MAKE SURE TO UPDATE THE README.md FILE   **
+echo .  MAKE SURE TO UPDATE THE README.md FILE
 echo .
 echo .
 echo .
