@@ -5,9 +5,9 @@
 
 ## GIT ##
 
-Create personal fork of the hotbath project in BitBucket: 
+Create personal fork of the project in BitBucket: 
 
-* https://source.youwe.nl/projects/hotbath/repos/pimcore-your-project-name/browse 
+* https://source.youwe.nl/projects/your-name/repos/your-project-name/browse 
 
 Then clone the project to your machine:
 

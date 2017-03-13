@@ -40,7 +40,7 @@ return [
         "params" => [
             "username" => "root",
             "password" => "root",
-            "dbname" => "hotbath",
+            "dbname" => "mydatabase",
             "host" => "localhost",
             "port" => "3306"
         ]
