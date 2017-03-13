@@ -16,6 +16,8 @@ composer require youwe/pimcore-shop
 
 composer update
 
+echo Executing:   chmod u+x ${CURRENT_PATH}/../../**/*.sh
+
 chmod u+x ${CURRENT_PATH}/../../**/*.sh
 /bin/bash ${CURRENT_PATH}/../../../tools/build/local-build.sh
 
@@ -51,6 +53,7 @@ echo .
 echo .
 echo .
 echo .  **   MAKE SURE TO UPDATE THE README.md FILE   **
+echo .
 echo .
 echo .
 
