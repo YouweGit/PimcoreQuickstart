@@ -38,11 +38,11 @@ return [
     "database" => [
         "adapter" => "Pdo_Mysql",
         "params" => [
-            "username" => "root",
-            "password" => "root",
-            "dbname" => "hotbath",
-            "host" => "127.0.0.1",
-            "port" => "3306"
+            "username" => "{[{[{local_db_username}]}]}",
+            "password" => "{[{[{local_db_password}]}]}",
+            "dbname" => "{[{[{local_db_name}]}]}",
+            "host" => "{[{[{local_db_host}]}]}",
+            "port" => "{[{[{local_db_port}]}]}"
         ]
     ],
     "documents" => [

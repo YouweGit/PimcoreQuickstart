@@ -70,10 +70,11 @@ class Manager
         "local_db_name"                             => "YourProjectName",
         "local_db_host"                             => "127.0.0.1",
         "local_db_port"                             => "3306",
-        "deployment_server_global_ip_address"       => "333.333.333.333",
-        "deployment_server_testing_username"        => "testing_login_name",
-        "deployment_server_acceptance_username"     => "acceptance_login_name",
-        "deployment_server_production_username"     => "production_login_name",
+        // source files are in capistrano git, so we should not auto-fill them:
+//        "deployment_server_global_ip_address"       => "333.333.333.333",
+//        "deployment_server_testing_username"        => "testing_login_name",
+//        "deployment_server_acceptance_username"     => "acceptance_login_name",
+//        "deployment_server_production_username"     => "production_login_name",
     ];
 
 //    * PimcoreDeployment

@@ -58,7 +58,7 @@ echo .
 echo .  .... in case of any errors;
 echo .
 echo .
-echo .  DOUBLE-CHECK THE DEPLOYMENT CREDENTIALS IN THE FOLLOWING FILES:
+echo .  PUT DEPLOYMENT CREDENTIALS IN THE FOLLOWING FILES:
 echo .
 echo .  /tools/capistrano/config/deploy.rb
 echo .  /tools/capistrano/config/deploy/acceptance.rb
@@ -83,7 +83,7 @@ echo .
 echo .
 echo .
 echo .
-echo .  MAKE SURE TO UPDATE THE README.md FILE
+echo .  ALSO:  MAKE SURE TO UPDATE THE README.md FILE
 echo .
 echo .
 echo .
