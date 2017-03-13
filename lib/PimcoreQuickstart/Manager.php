@@ -64,6 +64,18 @@ class Manager
         '/tools/build/steps/update_classdefinitions.sh'
     ];
 
+    public $placeholders = [
+        "local_db_username"                         => "root",
+        "local_db_password"                         => "root",
+        "local_db_name"                             => "YourProjectName",
+        "local_db_host"                             => "127.0.0.1",
+        "local_db_port"                             => "3306",
+        "deployment_server_global_ip_address"       => "333.333.333.333",
+        "deployment_server_testing_username"        => "testing_login_name",
+        "deployment_server_acceptance_username"     => "acceptance_login_name",
+        "deployment_server_production_username"     => "production_login_name",
+    ];
+
 //    * PimcoreDeployment
 //    * PimcoreFixtures
 //    * PimcoreHrefTypeahead
@@ -90,6 +102,7 @@ class Manager
 
     public function copyPluginFilesToProject()
     {
+        $this->getUserPlaceholderInput();
         $source = $this->pluginFilesRoot;
         $target = $this->pimcoreFilesRoot;
         $files = $this->files;
@@ -114,21 +127,50 @@ class Manager
             $s = $source . $sourcefile;
             $t = $target . $targetfile;
             echo "\nCopying:\n" . $s . " to\n" . $t . "\n\n";
-            if(file_exists($s)) {
-                $path = dirname($t);
-//                echo "[". $path . "]\n";
-                if(!file_exists($path)) {
-                    mkdir($path, 0777, true);
-                }
-                copy($s, $t);
-                echo "Ok\n";
+
+            if(file_exists($t)) {
+                echo "Target file exists - skipping\n";
             }
             else {
-                echo "File not found!\n";
+                if (file_exists($s)) {
+                    $path = dirname($t);
+                    //                echo "[". $path . "]\n";
+                    if (!file_exists($path)) {
+                        mkdir($path, 0777, true);
+                    }
+                    copy($s, $t);
+                    echo "Copied\n";
+                    if($direction == self::UPDATE_PROJECT) {
+                        $this->parse($t);
+                        echo " Parsed\n";
+                    }
+                }
+                else {
+                    echo "Source file not found!\n";
+                }
             }
         }
+    }
 
+    public function parse($file) {
+        $content = file_get_contents($file);
+        foreach($this->placeholders as $p => &$v) {
+            $content = str_replace('{[{[{' . $p . '}]}]}', $v, $content);
+        }
+        file_put_contents($file, $content);
+    }
 
+    public function getUserPlaceholderInput() {
+        foreach($this->placeholders as $p => &$v) {
+            // get input for $p ...
+            $input = readline($p . ' [' . $v . ']');
+            if($input) {
+                $v = $input;
+            }
+        }
+        print_r($this->placeholders);
+        readline("\n\nPress enter to continue, or ctrl-c to abort\n\n");
     }
 
 }
+

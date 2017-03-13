@@ -17,29 +17,32 @@ composer require youwe/pimcore-shop
 composer update
 
 chmod u+x ${CURRENT_PATH}/../../**/*.sh
-
+/bin/bash ${CURRENT_PATH}/../../../tools/build/local_build.sh
 echo .
 echo .
 echo .
-echo . PUT THE CORRECT IP ADDRESSES AND USERNAMES FOR DEPLOYMENTS IN THE FOLLOWING FILES:
-echo .
-echo . /tools/capistrano/config/deploy.rb
-echo . /tools/capistrano/config/deploy/acceptance.rb
-echo . /tools/capistrano/config/deploy/production.rb
-echo . /tools/capistrano/config/deploy/testing.rb
+echo .  .... in case of any errors;
 echo .
 echo .
+echo .  DOUBLE-CHECK THE DEPLOYMENT CREDENTIALS IN THE FOLLOWING FILES:
 echo .
-echo . PUT THE LOCAL DEV DB CREDENTIALS IN FOLLOWING FILES:
-echo .
-echo . /website/var/config/system.php
-echo . /tools/build/local.cfg
+echo .  /tools/capistrano/config/deploy.rb
+echo .  /tools/capistrano/config/deploy/acceptance.rb
+echo .  /tools/capistrano/config/deploy/production.rb
+echo .  /tools/capistrano/config/deploy/testing.rb
 echo .
 echo .
 echo .
-echo . RUN THE LOCAL BUILD:
+echo .  DOUBLE-CHECK THE LOCAL DEV DB CREDENTIALS IN FOLLOWING FILES:
 echo .
-echo . /bin/bash ${CURRENT_PATH}/../../../tools/build/local-build.sh
+echo .  /website/var/config/system.php
+echo .  /tools/build/local.cfg
+echo .
+echo .
+echo .
+echo .  RUN THE LOCAL BUILD AGAIN:
+echo .
+echo .  /bin/bash ${CURRENT_PATH}/../../../tools/build/local_build.sh
 echo .
 echo .
 echo .
