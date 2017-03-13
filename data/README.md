@@ -7,20 +7,20 @@
 
 Create personal fork of the hotbath project in BitBucket: 
 
-* https://source.youwe.nl/projects/hotbath/repos/hotbath-pimcore/browse 
+* https://source.youwe.nl/projects/hotbath/repos/pimcore-your-project-name/browse 
 
 Then clone the project to your machine:
 
 * Go in your commandline to /data/projects, and type the following command:
 ```bash
     cd /data/projects
-    git clone ssh://git@source.youwe.nl:7999/[YOUR_NAME]/hotbath-pimcore.git
+    git clone ssh://git@source.youwe.nl:7999/[YOUR_NAME]/pimcore-your-project-name.git your-project-name-pimcore
 ```
 
 ## Build ##
 
 ```mysql
-CREATE DATABASE hotbath DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+CREATE DATABASE {[{[{local_db_name}]}]} DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 ```
 
 ```bash
@@ -44,9 +44,9 @@ git config core.fileMode false
 
 ```apacheconfig
 <VirtualHost *:80>
-    ServerName hotbath.localhost
-    DocumentRoot /data/projects/hotbath-pimcore/
-    <Directory /data/projects/hotbath-pimcore/ >
+    ServerName your-project-name.localhost
+    DocumentRoot /data/projects/your-project-name-pimcore/
+    <Directory /data/projects/your-project-name-pimcore/ >
         Options FollowSymLinks
         AllowOverride All
         Require all granted
@@ -57,14 +57,14 @@ git config core.fileMode false
 ## Localhost ##
 Add this to /etc/hosts
 
-    127.0.0.1       hotbath.localhost
+    127.0.0.1       your-project-name.localhost
 
 
 ## Restart apache ###
 
 Ubuntu:
 
-    sudo a2ensite hotbath.conf
+    sudo a2ensite your-project-name.conf
     sudo service apache2 reload
 
 MacOS:
@@ -74,8 +74,8 @@ MacOS:
 
 Then start the browser to:
 
-* http://hotbath.localhost  (front)
-* http://hotbath.localhost/admin  (back)
+* http://your-project-name.localhost  (front)
+* http://your-project-name.localhost/admin  (back)
 
 
 ## Start developing on the project !! ##

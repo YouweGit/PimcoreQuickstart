@@ -49,8 +49,8 @@ Getting started
 
 ```bash
 cd /data/projects/
-composer create-project pimcore/pimcore ./PimcoreYourProjectName
-cd PimcoreYourProjectName
+composer create-project pimcore/pimcore ./your-project-name-pimcore
+cd your-project-name-pimcore
 composer dumpautoload -o
 ```
 
@@ -69,13 +69,17 @@ composer require youwe/pimcore-quickstart
 * push your new project to your new git repo
 
 ```bash
-cd /data/projects/PimcoreYourProjectName
+cd /data/projects/your-project-name-pimcore
 git init
 git add --all
 git commit -m "Initial Commit"
 git remote add origin ssh://git@source.youwe.nl:7999/pimb2b/pimcore-your-project-name.git
 git push -u origin master
 ```
+
+* verify the output of the script!!
+
+* follow the instructions on screen
 
 * continue local setup instructions from the README.md of the new project
 
@@ -86,7 +90,7 @@ Commands
 Initialize the project from the plugin:
 * /plugins/PimcoreQuickstart/cli/quickstart.sh
 
-DO NOT USE (only for development):
+DO NOT USE (this is only for quickstart-plugin-development purposes):
 * /plugins/PimcoreQuickstart/cli/copy-project-files-to-plugin.sh
 
 
