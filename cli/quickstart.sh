@@ -5,6 +5,13 @@ php ${CURRENT_PATH}/cli.php -a copy-plugin-files-to-project $*
 git clone --depth=1 --branch=master ssh://git@source.youwe.nl:7999/pimb2b/pimcore-capistrano.git ${CURRENT_PATH}/../../../tools/capistrano
 rm -rf ${CURRENT_PATH}/../../../tools/capistrano/.git
 
+echo .
+echo .
+echo .  Requiring packages ...
+echo .
+echo .
+
+
 composer require youwe/pimcore-deployment
 composer require youwe/pimcore-fixtures
 composer require youwe/pimcore-href-typeahead
@@ -14,11 +21,29 @@ composer require youwe/pimcore-object-defaults
 composer require youwe/pimcore-quickstart
 composer require youwe/pimcore-shop
 
+echo .
+echo .
+echo .  Running composer update ...
+echo .
+echo .
+
 composer update
 
-echo Executing:   chmod u+x ${CURRENT_PATH}/../../../**/*.sh
+echo .
+echo .
+echo .  Fixing *.sh executable permissions ...
+echo .
+echo .
 
-chmod u+x ${CURRENT_PATH}/../../../**/*.sh
+
+find ${CURRENT_PATH}/../../../ -type f -iname "*.sh" -exec chmod +x {} \;
+
+echo .
+echo .
+echo .  Running local build
+echo .
+echo .
+
 /bin/bash ${CURRENT_PATH}/../../../tools/build/local-build.sh
 
 echo .
