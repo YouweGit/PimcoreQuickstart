@@ -128,7 +128,7 @@ class Manager
             $t = $target . $targetfile;
             echo "\nCopying:\n" . $s . " to\n" . $t . "\n\n";
 
-            if(file_exists($t)) {
+            if(file_exists($t) && $direction == self::UPDATE_PLUGIN) {
                 echo "Target file exists - skipping\n";
             }
             else {
