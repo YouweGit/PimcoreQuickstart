@@ -57,8 +57,11 @@ if (!\Pimcore\ExtensionManager::isEnabled('plugin', $plugin)) {
     echo "\nEnabling plugin on the fly.\n";
     \Pimcore\ExtensionManager::enable('plugin', $plugin);
     $command = 'php ' . implode(' ', $argv);
-    echo "\nPlease re-execute command: [ $command ] \n";
+    echo "\nPlease press ctrl-c to abort current run and re-execute command: [ $command ] \n";
 //    echo shell_exec($command);    // does not work when requiring user input!!!! -> let the user restart it!
+    while(1) {
+        readline();
+    }
     die();
 }
 
