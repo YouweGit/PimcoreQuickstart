@@ -54,6 +54,38 @@ echo .
 
 echo .
 echo .
+echo .  Create pimcore system folders
+echo .
+echo .
+
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/assets
+/bin/bash touch ${CURRENT_PATH}/website/var/assets/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/backup
+/bin/bash touch ${CURRENT_PATH}/website/var/backup/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/cache
+/bin/bash touch ${CURRENT_PATH}/website/var/cache/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/classes
+/bin/bash touch ${CURRENT_PATH}/website/var/classes/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/email
+/bin/bash touch ${CURRENT_PATH}/website/var/email/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/log
+/bin/bash touch ${CURRENT_PATH}/website/var/log/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/recyclebin
+/bin/bash touch ${CURRENT_PATH}/website/var/recyclebin/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/search
+/bin/bash touch ${CURRENT_PATH}/website/var/search/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/system
+/bin/bash touch ${CURRENT_PATH}/website/var/system/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/tmp
+/bin/bash touch ${CURRENT_PATH}/website/var/tmp/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/versions
+/bin/bash touch ${CURRENT_PATH}/website/var/versions/.dummy
+/bin/bash mkdir -p ${CURRENT_PATH}/website/var/webdav
+/bin/bash touch ${CURRENT_PATH}/website/var/webdav/.dummy
+
+
+echo .
+echo .
 echo .
 echo .  .... in case of any errors;
 echo .

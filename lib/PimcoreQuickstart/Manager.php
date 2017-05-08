@@ -67,9 +67,11 @@ class Manager
     public $placeholders = [
         "local_db_username"                         => "root",
         "local_db_password"                         => "root",
-        "local_db_name"                             => "YourProjectName",
+        "local_db_name"                             => "your_project_name_pimcore",
         "local_db_host"                             => "127.0.0.1",
         "local_db_port"                             => "3306",
+        "project_name"                              => "Your Project Name",
+        "project_short_name"                        => "project-name-pimcore",
         // source files are in capistrano git, so we should not auto-fill them:
 //        "deployment_server_global_ip_address"       => "333.333.333.333",
 //        "deployment_server_testing_username"        => "testing_login_name",
