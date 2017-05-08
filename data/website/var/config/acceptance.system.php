@@ -2,7 +2,7 @@
 
 return [
     "general" => [
-        "timezone" => "Europe/Berlin",
+        "timezone" => "Europe/Amsterdam",
         "path_variable" => "",
         "domain" => "",
         "redirect_to_maindomain" => FALSE,
