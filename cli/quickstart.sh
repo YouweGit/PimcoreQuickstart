@@ -54,6 +54,38 @@ echo .
 
 echo .
 echo .
+echo .  Create pimcore system folders
+echo .
+echo .
+
+mkdir -p ${CURRENT_PATH}/website/var/assets
+touch ${CURRENT_PATH}/website/var/assets/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/backup
+touch ${CURRENT_PATH}/website/var/backup/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/cache
+touch ${CURRENT_PATH}/website/var/cache/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/classes
+touch ${CURRENT_PATH}/website/var/classes/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/email
+touch ${CURRENT_PATH}/website/var/email/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/log
+touch ${CURRENT_PATH}/website/var/log/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/recyclebin
+touch ${CURRENT_PATH}/website/var/recyclebin/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/search
+touch ${CURRENT_PATH}/website/var/search/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/system
+touch ${CURRENT_PATH}/website/var/system/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/tmp
+touch ${CURRENT_PATH}/website/var/tmp/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/versions
+touch ${CURRENT_PATH}/website/var/versions/.dummy
+mkdir -p ${CURRENT_PATH}/website/var/webdav
+touch ${CURRENT_PATH}/website/var/webdav/.dummy
+
+
+echo .
+echo .
 echo .
 echo .  .... in case of any errors;
 echo .
