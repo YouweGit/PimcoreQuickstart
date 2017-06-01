@@ -2,7 +2,7 @@
 
 return [
     "general" => [
-        "timezone" => "Europe/Berlin",
+        "timezone" => "Europe/Amsterdam",
         "path_variable" => "",
         "domain" => "",
         "redirect_to_maindomain" => FALSE,
@@ -38,11 +38,11 @@ return [
     "database" => [
         "adapter" => "Pdo_Mysql",
         "params" => [
-            "username" => "root",
-            "password" => "root",
-            "dbname" => "mydatabase",
-            "host" => "localhost",
-            "port" => "3306"
+            "username" => "{[{[{local_db_username}]}]}",
+            "password" => "{[{[{local_db_password}]}]}",
+            "dbname" => "{[{[{local_db_name}]}]}",
+            "host" => "{[{[{local_db_host}]}]}",
+            "port" => "{[{[{local_db_port}]}]}"
         ]
     ],
     "documents" => [

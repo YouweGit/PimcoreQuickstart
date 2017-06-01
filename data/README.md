@@ -1,4 +1,4 @@
-# Hotbath pimcore #
+# {[{[{project_name}]}]} pimcore #
 
 
 # Getting started #
@@ -14,7 +14,7 @@ Then clone the project to your machine:
 * Go in your commandline to /data/projects, and type the following command:
 ```bash
     cd /data/projects
-    git clone ssh://git@source.youwe.nl:7999/[YOUR_NAME]/pimcore-your-project-name.git your-project-name-pimcore
+    git clone ssh://git@source.youwe.nl:7999/[YOUR_NAME]/pimcore-your-project-name.git {[{[{project_short_name}]}]}
 ```
 
 ## Build ##
@@ -24,6 +24,7 @@ CREATE DATABASE {[{[{local_db_name}]}]} DEFAULT CHARACTER SET utf8 DEFAULT COLLA
 ```
 
 ```bash
+cd /data/projects/{[{[{project_short_name}]}]}
 cp website/var/config/system.example.php website/var/config/system.php
 cp tools/build/local.cfg.template tools/build/local.cfg
 ```
@@ -44,9 +45,9 @@ git config core.fileMode false
 
 ```apacheconfig
 <VirtualHost *:80>
-    ServerName your-project-name.localhost
-    DocumentRoot /data/projects/your-project-name-pimcore/
-    <Directory /data/projects/your-project-name-pimcore/ >
+    ServerName local.{[{[{project_short_name}]}]}.nl
+    DocumentRoot /data/projects/{[{[{project_short_name}]}]}/
+    <Directory /data/projects/{[{[{project_short_name}]}]}/ >
         Options FollowSymLinks
         AllowOverride All
         Require all granted
@@ -57,14 +58,14 @@ git config core.fileMode false
 ## Localhost ##
 Add this to /etc/hosts
 
-    127.0.0.1       your-project-name.localhost
+    127.0.0.1       local.{[{[{project_short_name}]}]}.nl
 
 
 ## Restart apache ###
 
 Ubuntu:
 
-    sudo a2ensite your-project-name.conf
+    sudo a2ensite {[{[{project_short_name}]}]}.conf
     sudo service apache2 reload
 
 MacOS:
@@ -74,8 +75,8 @@ MacOS:
 
 Then start the browser to:
 
-* http://your-project-name.localhost  (front)
-* http://your-project-name.localhost/admin  (back)
+* http://local.{[{[{project_short_name}]}]}.nl  (front)
+* http://local.{[{[{project_short_name}]}]}.nl/admin  (back)
 
 
 ## Start developing on the project !! ##
